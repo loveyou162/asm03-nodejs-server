@@ -1,0 +1,46 @@
+POST http://localhost:5000/user/signup
+Content-Type: application/json
+
+
+{
+    "fullname": "Phạm Thắng",
+    "email": "test@example.com",
+    "password": "123456",
+    "phone": "123456789",
+    "_csrf": "S7cJn9Eb-HYjsW70gNlU9VVUixhc7rCWaRZc"
+}
+
+###############
+GET http://localhost:5000/admin/some-route
+################################
+POST http://localhost:5000/shop/login
+Content-Type: application/json
+
+
+{
+    "email": "caoboi520@gmail.com",
+    "password": "123123123",
+    "_csrf": "6FuyUsxg-Pf2d4pivQQS5geCYyCWPVHgmHyo"
+}
+################################################################
+GET http://localhost:5000/shop/logout
+
+
+########
+GET  http://localhost:5000/shop/all-product
+##########
+GET  http://localhost:5000/shop/cart
+
+########
+GET  http://localhost:5000/shop/order
+###########
+POST  http://localhost:5000/shop/order-detail
+Content-Type: application/json
+
+
+{
+    "OrderId": "65ef215d222c8fabf4fb26d0"
+}
+
+#############
+GET  http://localhost:5000/admin/all-room

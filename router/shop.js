@@ -8,32 +8,32 @@ const { body } = require("express-validator");
 const User = require("../models/user");
 router.get(
   "/all-product",
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.getAllProducts
 );
 router.get(
   "/detail-product",
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.getDetailProduct
 );
 router.post(
   "/add-cart",
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.postCart
 );
 router.get(
   "/cart",
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.getCart
 );
 router.post(
   "/delete-cart",
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.postDeleteCartProduct
 );
 router.post(
   "/decrement-cart",
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.postDecrementCart
 );
 router.post(
@@ -44,17 +44,17 @@ router.post(
     body("phone").notEmpty().withMessage("Phone is required"),
     body("address").notEmpty().withMessage("Address is required"),
   ],
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.postOrder
 );
 router.get(
   "/order",
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.getOrder
 );
 router.post(
   "/order-detail",
-  [checkAuth.checkClientAuth, checkTypeUser.checkClient],
+  // [checkAuth.checkClientAuth, checkTypeUser.checkClient],
   shopController.postOrderDetail
 );
 router.post(
